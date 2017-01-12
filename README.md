@@ -1,15 +1,41 @@
-# Discord-Userbot
-
 [![PyPI](https://img.shields.io/pypi/v/discord.py.svg)](https://pypi.python.org/pypi/discord.py/)
 [![PyPI](https://img.shields.io/pypi/pyversions/discord.py.svg)](https://pypi.python.org/pypi/discord.py/)
 
-### Updates
+# Discord-bot
+A simple bot I wrote for people aiming to learn.
 
 ## Requirements
 
 - Python 3.4.2+
-- Discord.py Library
+- Discord.py Library(https://github.com/Rapptz/discord.py)
+- Windows 7+ 32bit/64bit(Sorry, mac seems to not work. **Hasnt been tested on linux.**)
 
-## Related Projects
+## Setup
 
-- [discord.js](https://github.com/discord-js/discord.js)
+Make sure you have all the requirements. 
+Go to (https://discordapp.com/developers) and create an application. 
+Make sure your application is a **BOT** account. 
+Get the **token** and save it somewhere in a text-editor. 
+On this **repo**, there's a nice green button that says, "**download**". 
+Click it, save to your desktop and extract zip file to desktop.
+Open up, ``bot.py`` and on **line 43** do the following: 
+
+Get your token and place it in, "YOUR TOKEN HERE"
+For example if my token was, "shdahsdh1dh712y2d1h"
+You would do this: 
+
+```
+bot.run("shdahsdh1dh712y2d1h")
+```
+
+After you're done, save and exit. 
+Click **Start.bat** and you should be good to go. 
+However, in order to invite your bot to your server, please do the following:
+``https://discordapp.com/oauth2/authorize?client_id=YOURBOTSCLIENTID&scope=bot&permissions=0``
+Replace the, "YOURBOTSCLIENTID" with the **client id** which can be found in your application. 
+Enjoy!:)
+
+## Other Projects
+
+- [Nutty](https://github.com/Sanjay-B/Nutty) - A simple language written in Python.
+- [Adriana](https://bots.discord.pw/bots/221752950874177536) - An all-in-one compact, modular bot used is Discord Servers.
