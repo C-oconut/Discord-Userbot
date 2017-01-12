@@ -18,7 +18,10 @@ Make sure your application is a **BOT** account.
 Get the **token** and save it somewhere in a text-editor. 
 On this **repo**, there's a nice green button that says, "**download**". 
 Click it, save to your desktop and extract zip file to desktop.
-Open up, ``bot.py`` and on **line 43** do the following: 
+Open up, ``bot.py`` and set the **Description** to the name of your
+bot. Then, set the **Prefix** as anything that you want. 
+
+On **line 43** do the following: 
 
 Get your token and place it in, "YOUR TOKEN HERE"
 For example if my token was, "shdahsdh1dh712y2d1h"
