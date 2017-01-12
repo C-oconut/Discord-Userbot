@@ -38,4 +38,4 @@ Enjoy!:)
 ## Other Projects
 
 - [Nutty](https://github.com/Sanjay-B/Nutty) - A simple language written in Python.
-- [Adriana](https://bots.discord.pw/bots/221752950874177536) - An all-in-one compact, modular bot used is Discord Servers.
+- [Adriana](https://bots.discord.pw/bots/221752950874177536) - An all-in-one compact, modular bot used in Discord Servers.
