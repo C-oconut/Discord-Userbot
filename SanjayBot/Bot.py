@@ -36,8 +36,33 @@ async def ping():
 async def about(ctx):
     """General Info"""
     if ctx.invoked_subcommand is None:
-        await bot.say("Invoked Sub-Command")
+        await bot.say("Invoked About Sub-Command")
 
+@bot.group(pass_context=True)
+async def math(ctx):
+    """General Info"""
+    if ctx.invoked_subcommand is None:
+        await bot.say("Invoked Math Sub-Command")
+		
+@math.command(description='add')
+async def add(number1 : int, number2 : int):
+	"""Adds numbers"""
+	await bot.say(number1 + number2)
+
+@math.command(description='subtract')
+async def subtract(number1 : int, number2 : int):
+	"""Subtracts numbers"""
+	await bot.say(number1 - number2)
+
+@math.command(description='multiply')
+async def multiply(number1 : int, number2 : int):
+	"""Multiplies numbers"""
+	await bot.say(number1 * number2)
+
+@math.command(description='divide')
+async def divide(number1 : int, number2 : int):
+	"""Divides numbers"""
+	await bot.say(number1 / number2)
 
 
 bot.run("YOUR TOKEN HERE")
