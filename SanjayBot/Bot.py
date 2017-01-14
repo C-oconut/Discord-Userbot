@@ -32,18 +32,65 @@ async def ping():
     """Ping"""
     await bot.say('Pong')
 
+
+
+
+
+
+
+
+
+
+
+
+
+#General Information module
 @bot.group(pass_context=True)
 async def about(ctx):
     """General Info"""
     if ctx.invoked_subcommand is None:
-        await bot.say("Invoked About Sub-Command")
+        await bot.say("Invoked Information Sub-Command")
 
+@about.command(description='info')
+async def info():
+	"""General information"""
+	await bot.say(
+    "This bot-kit was developed by Sanjay#2382.\n",
+    "However, please contribute if you can!\n",
+    "The bot was writtin in python using the\n",
+    "discord.py library.\n",
+    "[Support Server](https://discordapp.com/invite/8xmtspU)\n",
+    "[Repository](https://sanjay-b.github.io/Sanjay-DiscordBot/)\n",
+    )
+
+@about.command(description='prefix')
+async def prefix():
+    """Bot's Prefix"""
+    await bot.say("The prefix is " + prefix)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#math module
 @bot.group(pass_context=True)
 async def math(ctx):
     """General Info"""
     if ctx.invoked_subcommand is None:
         await bot.say("Invoked Math Sub-Command")
-		
+
 @math.command(description='add')
 async def add(number1 : int, number2 : int):
 	"""Adds numbers"""
@@ -64,5 +111,11 @@ async def divide(number1 : int, number2 : int):
 	"""Divides numbers"""
 	await bot.say(number1 / number2)
 
+	
+	
+	
+	
+	
+	
 
 bot.run("YOUR TOKEN HERE")
