@@ -17,20 +17,18 @@ bot = False
 bot = commands.Bot(command_prefix='PREFIX', description=description)
 
 
-@bot.event
-async def on_ready():
-    print('------ Logged in as -----')
-    print('Username: ' + bot.user.name)
-    print('UserID: ' + bot.user.id)
-    print('Prefix: ' + prefix)
-    print('----- Output -----')
-
-
-
+#Non-Categoric Commands
 @bot.command(description='ping')
 async def ping():
     """Ping"""
-    await bot.say('Pong')
+    await bot.say(embed=discord.Embed(title='Ping Result',description='pong', colour=discord.Colour.blue()))
+
+@bot.command(description='shutdown',pass_context=False)
+async def shutdown():
+    """Shutdown"""
+    await bot.logout()
+
+
 
 
 
@@ -49,24 +47,19 @@ async def ping():
 async def about(ctx):
     """General Info"""
     if ctx.invoked_subcommand is None:
-        await bot.say("Invoked Information Sub-Command")
+        await bot.say(embed=discord.Embed(title='Invoked',description='About Section', colour=discord.Colour.green()))
 
 @about.command(description='info')
 async def info():
-	"""General information"""
-	await bot.say(
-    "This bot-kit was developed by Sanjay#2382.\n",
-    "However, please contribute if you can!\n",
-    "The bot was writtin in python using the\n",
-    "discord.py library.\n",
-    "[Support Server](https://discordapp.com/invite/8xmtspU)\n",
-    "[Repository](https://sanjay-b.github.io/Sanjay-DiscordBot/)\n",
-    )
+    """General information"""
+    await bot.say(embed=discord.Embed(title='Information',description='Developed by Sanjay#2382 [Support Server](https://discordapp.com/invite/8xmtspU) [Repository](https://sanjay-b.github.io/Sanjay-DiscordBot/)', colour=discord.Colour.teal()))
+
 
 @about.command(description='prefix')
 async def prefix():
     """Bot's Prefix"""
-    await bot.say("The prefix is " + prefix)
+    await bot.say(embed=discord.Embed(title='Invoked',description='The prefix is " + "``" + prefix1 + "``', colour=discord.Colour.blue()))
+
 
 
 
@@ -87,35 +80,36 @@ async def prefix():
 #math module
 @bot.group(pass_context=True)
 async def math(ctx):
-    """General Info"""
+    """Set of Math Commands"""
     if ctx.invoked_subcommand is None:
-        await bot.say("Invoked Math Sub-Command")
+        await bot.say(embed=discord.Embed(title='Invoked',description='Math Section', colour=discord.Colour.blue()))
 
 @math.command(description='add')
 async def add(number1 : int, number2 : int):
-	"""Adds numbers"""
-	await bot.say(number1 + number2)
+    """Adds numbers"""
+    await bot.say(number1 + number2)
 
 @math.command(description='subtract')
 async def subtract(number1 : int, number2 : int):
-	"""Subtracts numbers"""
-	await bot.say(number1 - number2)
+    """Subtracts numbers"""
+    await bot.say(number1 - number2)
 
 @math.command(description='multiply')
 async def multiply(number1 : int, number2 : int):
-	"""Multiplies numbers"""
-	await bot.say(number1 * number2)
+    """Multiplies numbers"""
+    await bot.say(number1 * number2)
 
 @math.command(description='divide')
 async def divide(number1 : int, number2 : int):
-	"""Divides numbers"""
-	await bot.say(number1 / number2)
+    """Divides numbers"""
+    await bot.say(number1 / number2)
 
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 
 bot.run("YOUR TOKEN HERE")
